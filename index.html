@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7f3">
+  <meta name="description" content="Learn the JSS3 mathematics syllabus with clear notes, worked examples and practice questions.">
+  <title>Maths Made Easy | JSS3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="Maths Made Easy home">
+        <span class="brand-mark" aria-hidden="true">∑</span>
+        <span class="brand-name">maths<span>made easy</span></span>
+      </a>
+
+      <div class="class-label">YOUR CLASS</div>
+      <div class="class-card">
+        <span class="class-icon" aria-hidden="true">✳</span>
+        <span><strong>JSS 3 Mathematics</strong><small>Junior secondary · Year 3</small></span>
+      </div>
+
+      <div class="nav-heading">LEARNING</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <button class="nav-link active" id="homeNav" type="button"><span class="nav-icon">⌂</span> Overview</button>
+        <a class="nav-link" href="#syllabus"><span class="nav-icon">▦</span> Full syllabus <span class="nav-count" id="topicCount">18</span></a>
+        <button class="nav-link" id="practiceNav" type="button"><span class="nav-icon">✎</span> Practice questions</button>
+      </nav>
+
+      <div class="nav-heading terms-heading">SYLLABUS</div>
+      <div class="term-list" id="termList" aria-label="Filter by school term">
+        <button class="term-link selected" data-term="all" type="button"><span class="term-dot all-dot"></span> All topics <span class="term-total" id="allTotal"></span></button>
+        <button class="term-link" data-term="1" type="button"><span class="term-dot term-one"></span> First term <span class="term-total" id="termOneTotal"></span></button>
+        <button class="term-link" data-term="2" type="button"><span class="term-dot term-two"></span> Second term <span class="term-total" id="termTwoTotal"></span></button>
+        <button class="term-link" data-term="3" type="button"><span class="term-dot term-three"></span> Third term <span class="term-total" id="termThreeTotal"></span></button>
+      </div>
+
+      <div class="sidebar-bottom">
+        <div class="help-card">
+          <span class="help-spark" aria-hidden="true">✦</span>
+          <strong>Small steps add up.</strong>
+          <p>Learn one topic at a time and keep your progress going.</p>
+        </div>
+        <div class="student-row">
+          <span class="avatar">S</span>
+          <span class="student-name">My learning<small>JSS 3 student</small></span>
+          <span class="student-menu" aria-hidden="true">···</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <div class="breadcrumb">Learning space <span>/</span> <strong>JSS 3 Mathematics</strong></div>
+        <div class="topbar-right">
+          <span class="topbar-note"><span class="status-dot"></span> Your progress is saved</span>
+          <button class="top-avatar" type="button" aria-label="Student profile">S</button>
+        </div>
+      </header>
+
+      <div class="page-wrap">
+        <section class="welcome-row">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span> YOUR LEARNING SPACE</div>
+            <h1>Mathematics, made <span>understandable.</span></h1>
+            <p class="welcome-copy">Everything you need for JSS 3 Mathematics, explained one step at a time.</p>
+          </div>
+          <div class="date-pill"><span aria-hidden="true">◷</span> Learn at your own pace</div>
+        </section>
+
+        <section class="hero-card" aria-label="Learning progress">
+          <div class="hero-copy">
+            <div class="hero-kicker"><span class="mini-spark">✦</span> YOUR JSS 3 JOURNEY</div>
+            <h2>Every problem has<br>a way through.</h2>
+            <p>Build your confidence with clear notes, worked examples and questions you can try yourself.</p>
+            <a class="primary-button" href="#syllabus">Explore the syllabus <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="art-orbit orbit-one"></div>
+            <div class="art-orbit orbit-two"></div>
+            <div class="art-circle"></div>
+            <div class="art-equation eq-one">x + y = 12</div>
+            <div class="art-equation eq-two">a² + b²</div>
+            <div class="art-equation eq-three">πr²</div>
+            <div class="art-equation eq-four">3x − 7</div>
+            <div class="art-star">✳</div>
+            <div class="art-dot"></div>
+          </div>
+          <div class="hero-index">01 <span>/ 03</span></div>
+        </section>
+
+        <section class="stats-grid" aria-label="Your syllabus overview">
+          <article class="stat-card">
+            <div class="stat-top"><span class="stat-icon purple-icon">▦</span><span class="stat-label">SYLLABUS</span></div>
+            <div class="stat-number"><span id="completedCount">0</span><small> / <span id="totalTopics">18</span></small></div>
+            <div class="stat-caption">topics completed</div>
+            <div class="progress-track"><span id="progressBar"></span></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span class="stat-icon green-icon">✓</span><span class="stat-label">PRACTICE</span></div>
+            <div class="stat-number"><span id="answeredCount">0</span><small> questions</small></div>
+            <div class="stat-caption">answers revealed</div>
+            <div class="stat-foot"><span class="tiny-check">✓</span> Keep practising to learn more</div>
+          </article>
+          <article class="stat-card focus-stat">
+            <div class="stat-top"><span class="stat-icon orange-icon">✦</span><span class="stat-label">A GOOD PLACE TO START</span></div>
+            <div class="focus-content">
+              <span class="focus-number">01</span>
+              <div><strong>Number &amp; Numeration</strong><small>Build a strong foundation</small></div>
+              <button class="round-arrow" data-open-topic="number-operations" type="button" aria-label="Open Number and Numeration">↗</button>
+            </div>
+          </article>
+        </section>
+
+        <section class="syllabus-section" id="syllabus">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow section-eyebrow"><span class="eyebrow-line"></span> YOUR COURSE MAP</div>
+              <h2>Explore the syllabus</h2>
+              <p>Choose a topic to read the notes and work through the examples.</p>
+            </div>
+            <label class="search-box">
+              <span aria-hidden="true">⌕</span>
+              <input id="topicSearch" type="search" placeholder="Find a topic..." aria-label="Search syllabus topics">
+              <kbd>/</kbd>
+            </label>
+          </div>
+
+          <div class="filter-row">
+            <div class="filter-tabs" role="group" aria-label="Filter topics by term">
+              <button class="filter-tab active" data-term="all" type="button">All topics <span id="filterAll"></span></button>
+              <button class="filter-tab" data-term="1" type="button">First term</button>
+              <button class="filter-tab" data-term="2" type="button">Second term</button>
+              <button class="filter-tab" data-term="3" type="button">Third term</button>
+            </div>
+            <span class="result-label" id="resultLabel">16 topics</span>
+          </div>
+
+          <div class="topic-grid" id="topicGrid" aria-live="polite"></div>
+          <div class="empty-state" id="emptyState" hidden>
+            <span>⌕</span><strong>No topics found</strong><p>Try a different search or term.</p>
+          </div>
+          <p class="curriculum-note">Topic order and emphasis can vary by school and state. This guide brings together the commonly taught JSS 3 Mathematics syllabus.</p>
+        </section>
+
+        <footer class="footer"><span class="footer-mark">∑</span><span>Made for curious minds.</span><span class="footer-right">JSS 3 Mathematics <span>·</span> Learn one step at a time</span></footer>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="topicModal" hidden>
+    <section class="topic-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Close topic">×</button>
+      <div id="modalContent"></div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
